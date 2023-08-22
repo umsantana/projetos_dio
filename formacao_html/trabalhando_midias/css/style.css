@@ -4,3 +4,11 @@
     border: 0px;
   }
   
+table {
+  border: solid 1px black;
+}
+
+table th {
+  background-color: black;
+  color: aliceblue;
+}
