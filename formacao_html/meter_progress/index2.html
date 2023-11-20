@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Acompanhamento de Leitura</title>
+</head>
+
+<body>
+
+    <h1>Título da Página</h1>
+    <p>Texto da página...</p>
+
+    <meter value="0" min="0" max="100" id="progresso-leitura">0%</meter>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const alturaPagina = document.documentElement.scrollHeight - window.innerHeight;
+            const distanciaRolada = window.scrollY;
+            const progresso = (distanciaRolada / alturaPagina) * 100;
+
+            const medidor = document.getElementById('progresso-leitura');
+            medidor.value = progresso;
+            medidor.textContent = Math.round(progresso) + '%';
+        });
+    </script>
+
+</body>
+
+</html>
